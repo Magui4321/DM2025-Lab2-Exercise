@@ -1,0 +1,229 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+Guillermo del Toro’s Pinocchio review, a <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">superbly strange stop-motion animation</span> 
+Death and fascism may not seem ideal subjects for a life-affirming fantasy animation for 
+grownup children of all ages. Yet Mexican maestro Guillermo del Toro, whose 2017 
+masterpiece The Shape of Water won the Oscar for best picture, brings his monstrous 
+cinematic skills to bear on Carlo Collodi’s timeless fable with <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">miraculous results</span>, turning it 
+into a Mussolini-era parable about a “lethal form of control and paternity”. Using the tactility 
+of stop-motion animation to lend <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">splintery weight (both physical and emotional)</span> to the story. 
+Along with co-writer Patrick McHale (Matthew Robbins gets a “screen story” credit), Del Toro 
+resituates Collodi’s source in the between-the-war years of the 20th century. Carpenter 
+Geppetto (voiced by David Bradley) has lost his beloved son, Carlo, in the Great War. One 
+night, drunk on grief, he cuts down the tree by Carlo’s grave and builds a ramshackle puppet 
+(Gris Grimly’s illustrations provide structural inspiration) to replace his lost child. When a blue 
+spirit breathes life into the puppet, Geppetto is <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">initially terrified</span> of the whirling dervish 
+unleashed in his home. But the pair soon settle down, with Pinocchio (Gregory Mann) 
+helping Geppetto repair the huge crucified Christ that hangs like a tortured marionette in the 
+church where congregants shriek about demonic puppets. “Everybody likes him,” says 
+Pinocchio, pointing up at what looks like a prop from Ken Russell’s The Devils (1971). “He’s 
+made of wood too. Why do they like him and not me?” 
+Yes, Pinocchio is bequeathed a conscience in the form of a talking cricket, a character who 
+(let us <span class="lx-highlight" data-idx="4" style="background-color:#C8E6C9;">not forget) Pinocchio killed with a hammer early on in Collodi’s original. But Ewan 
+McGregor’s narrator Sebastian J Cricket is <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">no pious stooge</span>; nor is the Fairy with the 
+Turquoise Hair (whom Collodi also declares dead) a beneficent bestower</span> of “real boy” 
+human status. Instead, she is a multi-eyed Wood Sprite (Tilda Swinton) with one foot in the 
+grave, whose underworld alter ego tells Pinocchio that the only path to life is (guess what?) 
+death – the very thing that gives life value. 
+While it’s tempting to compare this version of Pinocchio with Matteo Garrone’s 2019 labour 
+of love, there’s a closer bond with Steven Spielberg’s <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">still underrated</span> 2001 sci-fi fantasy AI: 
+Artificial Intelligence. Like Spielberg, Del Toro is <span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">fascinated by the Frankenstein elements of 
+a story in which monsters are not what they seem</span>, and the attainment of “humanity” is 
+<span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">portrayed as a flawed venture that must be solved through narrative poetry rather than 
+physical transformation</span>. Both directors also <span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">embrace the surreal visual spectacle of a story</span> 
+that sends its characters into the belly of the beast via grotesquely gaping jaws, with Del 
+Toro also <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">cheekily tipping his hat</span> towards Spielberg’s most explosive creature feature. 
+Yet ultimately, it’s the film’s <span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">sheer strangeness</span> – that <span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">peculiarly magical, lapsed-Catholic 
+sensibility that runs throughout all of Del Toro’s most personal works</span> – that <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;"><span class="lx-highlight" data-idx="14" style="background-color:#D2E3FC;">makes this sing 
+and fly</span></span>.
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="14" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/15</span> |
+          Pos <span id="posInfo">[56-94]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "superbly strange stop-motion animation", "color": "#C8E6C9", "startPos": 56, "endPos": 94, "beforeText": "**Page 1**\n&quot;&quot;&quot;\nGuillermo del Toro\u2019s Pinocchio review, a ", "extractionText": "superbly strange stop-motion animation", "afterText": " \nDeath and fascism may not seem ideal subjects for a life-affirming fantasy animation for \ngrownup children of all ages. Yet Mexican maestro Guillerm", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Guillermo del Toro\u2019s Pinocchio</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">superbly strange stop-motion animation</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "miraculous results", "color": "#C8E6C9", "startPos": 417, "endPos": 435, "beforeText": "\nmasterpiece The Shape of Water won the Oscar for best picture, brings his monstrous \ncinematic skills to bear on Carlo Collodi\u2019s timeless fable with ", "extractionText": "miraculous results", "afterText": ", turning it \ninto a Mussolini-era parable about a \u201clethal form of control and paternity\u201d. Using the tactility \nof stop-motion animation to lend splin", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Guillermo del Toro\u2019s Pinocchio</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">miraculous results</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "splintery weight (both physical and emotional)", "color": "#C8E6C9", "startPos": 580, "endPos": 626, "beforeText": "sults, turning it \ninto a Mussolini-era parable about a \u201clethal form of control and paternity\u201d. Using the tactility \nof stop-motion animation to lend ", "extractionText": "splintery weight (both physical and emotional)", "afterText": " to the story. \nAlong with co-writer Patrick McHale (Matthew Robbins gets a \u201cscreen story\u201d credit), Del Toro \nresituates Collodi\u2019s source in the betwe", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the tactility of stop-motion animation</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">splintery weight</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "initially terrified", "color": "#C8E6C9", "startPos": 1161, "endPos": 1180, "beforeText": "Gris Grimly\u2019s illustrations provide structural inspiration) to replace his lost child. When a blue \nspirit breathes life into the puppet, Geppetto is ", "extractionText": "initially terrified", "afterText": " of the whirling dervish \nunleashed in his home. But the pair soon settle down, with Pinocchio (Gregory Mann) \nhelping Geppetto repair the huge crucif", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Geppetto</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">terrified</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "not a beneficent bestower", "color": "#C8E6C9", "startPos": 1719, "endPos": 1961, "beforeText": " of wood too. Why do they like him and not me?\u201d \nYes, Pinocchio is bequeathed a conscience in the form of a talking cricket, a character who \n(let us ", "extractionText": "not forget) Pinocchio killed with a hammer early on in Collodi\u2019s original. But Ewan \nMcGregor\u2019s narrator Sebastian J Cricket is no pious stooge; nor is the Fairy with the \nTurquoise Hair (whom Collodi also declares dead) a beneficent bestower", "afterText": " of \u201creal boy\u201d \nhuman status. Instead, she is a multi-eyed Wood Sprite (Tilda Swinton) with one foot in the \ngrave, whose underworld alter ego tells P", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Fairy with the Turquoise Hair</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">not a beneficent bestower</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "no pious stooge", "color": "#C8E6C9", "startPos": 1847, "endPos": 1862, "beforeText": "haracter who \n(let us not forget) Pinocchio killed with a hammer early on in Collodi\u2019s original. But Ewan \nMcGregor\u2019s narrator Sebastian J Cricket is ", "extractionText": "no pious stooge", "afterText": "; nor is the Fairy with the \nTurquoise Hair (whom Collodi also declares dead) a beneficent bestower of \u201creal boy\u201d \nhuman status. Instead, she is a mul", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Ewan McGregor\u2019s narrator Sebastian J Cricket</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">no pious stooge</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "still underrated", "color": "#C8E6C9", "startPos": 2359, "endPos": 2375, "beforeText": ". \nWhile it\u2019s tempting to compare this version of Pinocchio with Matteo Garrone\u2019s 2019 labour \nof love, there\u2019s a closer bond with Steven Spielberg\u2019s ", "extractionText": "still underrated", "afterText": " 2001 sci-fi fantasy AI: \nArtificial Intelligence. Like Spielberg, Del Toro is fascinated by the Frankenstein elements of \na story in which monsters a", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Steven Spielberg\u2019s 2001 sci-fi fantasy AI: Artificial Intelligence</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">underrated</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "fascinated by the Frankenstein elements of a story in which monsters are not what they seem", "color": "#C8E6C9", "startPos": 2454, "endPos": 2546, "beforeText": "of love, there\u2019s a closer bond with Steven Spielberg\u2019s still underrated 2001 sci-fi fantasy AI: \nArtificial Intelligence. Like Spielberg, Del Toro is ", "extractionText": "fascinated by the Frankenstein elements of \na story in which monsters are not what they seem", "afterText": ", and the attainment of \u201chumanity\u201d is \nportrayed as a flawed venture that must be solved through narrative poetry rather than \nphysical transformation", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Del Toro</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">fascinated by the Frankenstein elements</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "portrayed as a flawed venture that must be solved through narrative poetry rather than physical transformation", "color": "#C8E6C9", "startPos": 2585, "endPos": 2696, "beforeText": "lberg, Del Toro is fascinated by the Frankenstein elements of \na story in which monsters are not what they seem, and the attainment of \u201chumanity\u201d is \n", "extractionText": "portrayed as a flawed venture that must be solved through narrative poetry rather than \nphysical transformation", "afterText": ". Both directors also embrace the surreal visual spectacle of a story \nthat sends its characters into the belly of the beast via grotesquely gaping ja", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the attainment of \u201chumanity\u201d</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">flawed venture</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "embrace the surreal visual spectacle of a story", "color": "#C8E6C9", "startPos": 2718, "endPos": 2765, "beforeText": "f \u201chumanity\u201d is \nportrayed as a flawed venture that must be solved through narrative poetry rather than \nphysical transformation. Both directors also ", "extractionText": "embrace the surreal visual spectacle of a story", "afterText": " \nthat sends its characters into the belly of the beast via grotesquely gaping jaws, with Del \nToro also cheekily tipping his hat towards Spielberg\u2019s ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Both directors</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">surreal visual spectacle</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "cheekily tipping his hat", "color": "#C8E6C9", "startPos": 2870, "endPos": 2894, "beforeText": "brace the surreal visual spectacle of a story \nthat sends its characters into the belly of the beast via grotesquely gaping jaws, with Del \nToro also ", "extractionText": "cheekily tipping his hat", "afterText": " towards Spielberg\u2019s most explosive creature feature. \nYet ultimately, it\u2019s the film\u2019s sheer strangeness \u2013 that peculiarly magical, lapsed-Catholic \ns", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Del Toro</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">cheekily tipping his hat</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "sheer strangeness", "color": "#C8E6C9", "startPos": 2981, "endPos": 2998, "beforeText": "quely gaping jaws, with Del \nToro also cheekily tipping his hat towards Spielberg\u2019s most explosive creature feature. \nYet ultimately, it\u2019s the film\u2019s ", "extractionText": "sheer strangeness", "afterText": " \u2013 that peculiarly magical, lapsed-Catholic \nsensibility that runs throughout all of Del Toro\u2019s most personal works \u2013 that makes this sing \nand fly.\n&quot;", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">sheer strangeness</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "peculiarly magical, lapsed-Catholic sensibility that runs throughout all of Del Toro\u2019s most personal works", "color": "#C8E6C9", "startPos": 3006, "endPos": 3113, "beforeText": "el \nToro also cheekily tipping his hat towards Spielberg\u2019s most explosive creature feature. \nYet ultimately, it\u2019s the film\u2019s sheer strangeness \u2013 that ", "extractionText": "peculiarly magical, lapsed-Catholic \nsensibility that runs throughout all of Del Toro\u2019s most personal works", "afterText": " \u2013 that makes this sing \nand fly.\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">peculiarly magical, lapsed-Catholic sensibility</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "makes this sing and fly", "color": "#C8E6C9", "startPos": 3121, "endPos": 3145, "beforeText": "he film\u2019s sheer strangeness \u2013 that peculiarly magical, lapsed-Catholic \nsensibility that runs throughout all of Del Toro\u2019s most personal works \u2013 that ", "extractionText": "makes this sing \nand fly", "afterText": ".\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">the film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">sing and fly</span>}</div>"}, {"index": 14, "class": "audience_impact", "text": "makes this sing and fly", "color": "#D2E3FC", "startPos": 3121, "endPos": 3145, "beforeText": "he film\u2019s sheer strangeness \u2013 that peculiarly magical, lapsed-Catholic \nsensibility that runs throughout all of Del Toro\u2019s most personal works \u2013 that ", "extractionText": "makes this sing \nand fly", "afterText": ".\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">excitement, joy</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">the film\u2019s sheer strangeness \u2013 that peculiarly magical, lapsed-Catholic sensibility</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
